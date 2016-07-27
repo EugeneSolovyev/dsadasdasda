@@ -1,0 +1,77 @@
+#page-preloader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -o-flex;
+	display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	-moz-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-o-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-o-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+    z-index: 9999;
+    background-color: #3f3f3f;
+}
+
+#page-preloader .box {
+    background-image: url(../src/bg/squared_metal.png);
+    height: 35vh;
+    width: 2vw;
+    margin: 0 1px;
+    opacity: .5;
+    box-shadow: 0 0 30px #000;
+    border-radius: 3px;
+    -webkit-animation: heightChange 1s infinite ease-in-out;
+    animation: heightChange 1s infinite ease-in-out;
+}
+
+#page-preloader .box2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+#page-preloader .box3 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+#page-preloader .box4 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+#page-preloader .box5 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+@keyframes myMove {
+  0%   {top: 0px;}
+  25%  {top: 200px;}
+  50%  {top: 100px;}
+  75%  {top: 200px;}
+  100% {top: 0px;}
+}
+
+@-webkit-keyframes heightChange {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes heightChange {
+  0%, 40%, 100% { transform: scaleY(0.4); }
+  20% { transform: scaleY(1.0); }
+}
